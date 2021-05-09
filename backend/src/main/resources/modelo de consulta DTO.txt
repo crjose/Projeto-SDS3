@@ -1,0 +1,21 @@
+
+[
+
+    {
+        "SellerName":"Anakin",
+        "visited": 1000,
+        "deals":800
+    }
+
+      {
+        "SellerName":"Anakin",
+        "visited": 1000,
+        "deals":800
+    },
+
+      {
+        "SellerName":"Anakin",
+        "visited": 1000,
+        "deals":800
+    }
+]
