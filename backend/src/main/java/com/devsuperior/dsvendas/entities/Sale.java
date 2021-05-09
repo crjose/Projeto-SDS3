@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -22,7 +23,6 @@ public class Sale {
 	private Double amount;
 	private LocalDate date;
 	
-	//Representando um vendedor para cada venda
 	@ManyToOne
 	@JoinColumn(name = "seller_id")
 	private Seller seller;
@@ -34,7 +34,7 @@ public class Sale {
 	//construtor com argumentos
 	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		
-		Id = id;
+		this.Id = id;
 		this.visited = visited;
 		this.deals = deals;
 		this.amount = amount;
@@ -42,7 +42,8 @@ public class Sale {
 		this.seller = seller;
 	}
 	
-
+	//geters and setters
+	
 	public Long getId() {
 		return Id;
 	}
@@ -84,6 +85,8 @@ public class Sale {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
+
+	
 
 	public Seller getSeller() {
 		return seller;
